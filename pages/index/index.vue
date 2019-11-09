@@ -68,7 +68,6 @@
         const x = Math.floor((pos.x - 2 * this.radius) / this.padding);
         const y = Math.floor((pos.y - 2 * this.radius) / this.padding);
         this.designChess(x, y);
-        // this.designBoard();
         this.ctx.draw(true);
       },
       // writeMessage(message) {
