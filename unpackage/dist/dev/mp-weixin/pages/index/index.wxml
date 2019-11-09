@@ -1,0 +1,1 @@
+<view><canvas style="width:100%;height:500px;" canvas-id="myCanvas" data-event-opts="{{[['touchend',[['handleTouchEnd',['$event']]]]]}}" bindtouchend="__e"></canvas></view>
