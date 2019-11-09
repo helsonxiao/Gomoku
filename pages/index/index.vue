@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    onLoad: function(e) {
+    onReady: function() {
       this.rowCount = 7;
       this.columnCount = 7;
       this.padding = 50;
@@ -17,6 +17,7 @@
         this.designBoard();
         this.ctx.draw();
       }, 100)
+
 
       this.isMe = true;
       this.chessBox = [];
