@@ -15,6 +15,7 @@
       this.boardTask = setTimeout(() => {
         this.ctx = uni.createCanvasContext('myCanvas');
         this.designBoard();
+        this.designChess(0, 0);
         this.ctx.draw();
       }, 100)
 
@@ -44,12 +45,12 @@
         this.ctx.stroke();
       },
       designChess(x, y) {
-        if (this.chessBox[x][y] !== 0) {
-          return;
-        }
+        // if (this.chessBox[x][y] !== 0) {
+        //   return;
+        // }
 
-        this.chessBox[x][y] = this.isMe ? 1 : 2;
-        this.isMe = !this.isMe;
+        // this.chessBox[x][y] = this.isMe ? 1 : 2;
+        // this.isMe = !this.isMe;
         this.ctx.beginPath();
         this.ctx.arc(
           (x + 1) * this.padding,
@@ -59,7 +60,7 @@
           2 * Math.PI,
         );
         this.ctx.closePath();
-        this.ctx.fillStyle = this.chessBox[x][y] === 1 ? 'black' : 'red';
+        // this.ctx.fillStyle = this.chessBox[x][y] === 1 ? 'black' : 'red';
         this.ctx.fill();
       },
       handleTouchEnd(event) {
